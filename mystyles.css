@@ -1,90 +1,182 @@
-h1, h2, h3, h4 {
-  line-height: 30 px;
-  font-family: "Century Gothic", "Comic Sans MS";
+@import url("https://fonts.googleapis.com/css?family=Just+Another+Hand");
+@import url("https://fonts.googleapis.com/css?family=Raleway+Dots");
+
+h1, h2, h3 {
+  line-height: 10px;
+  font-family: "Just Another Hand";
   margin-top: 5%;
   margin-bottom: 5%;
-}
-
-h1, h2, h3, h4, footer {
   text-align: center;
 }
 
 h1 {
-  font-size: 400%;
+  font-size: 800%;
   color: deepskyblue;
+  padding-top: 100px;
+  padding-bottom: 0px;
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 300%;
   color: deepskyblue;
+  padding-top: 50px;
 }
 
 h3 {
-  font-size: 150%;
-  color: darkblue;
+  font-size: 300%;
+  line-height: 1.25;
+  color: silver;
+  padding-bottom: 0px;
 }
 
 h4 {
-  font-size: 120%;
-  color: deeppink;
+  font-size: 180%;
+  font-family: "Raleway Dots";
+  color: deepskyblue;
+  text-align: left;
+  padding-left: 400px;
 }
 
-body {
-  margin: 0;
+h5 {
+  font-size: 80%;
+  font-family: "Raleway Dots";
+  text-align: right;
+  padding-right: 400px;
+}
+
+body, .img-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: white;
   color: gray;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 20px;
   text-align: center;
-  font-family: "Century Gothic", "Comic Sans MS";
+  font-family: "Garamond", "Century Gothic";
 }
 
 p {
   margin-left: 25%;
   margin-right: 25%;
   text-align: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 footer {
-  font-size: 30 px;
-  color: deeppink;
-  font-family: "Castellar";
+  font-size: 30px;
+  color: hotpink;
+  font-family: "Just Another Hand";
+  padding-bottom: 50px;
+  text-align: right;
+  margin-right: 50px;
 }
 
 nav {
-  background-color: powderblue;
-  font-size: 25px;
+  font-size: 40px;
+  font-family: "Just Another Hand";
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-li {
-  float: left;
+  margin: 0px;
+  width: 100%;
+  top: 0px;
+  left: 5px;
+  padding: 10px 10px 10px 10px;
+  position: fixed;
+  background-color: white;
+  opacity: 0.85;
+  filter: alpha(opacity=50);
 }
 
 ul {
   list-style-type: none;
 }
 
+ol {
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.advice {
+  font-size: 40px;
+  line-height: 1.5;
+  font-family: "Just Another Hand";
+  color: pink;
+}
+
 li a {
+  float: center;
   padding: 16px 32px;
   display: block;
   color: gray;
+}
+
+li.nav_bar {
+  float: left;
+} /* lists for navigation bar */
+
+a:link, a:visited {
+  color: gray;
+  text-decoration: none; /* removes underline */
+}
+
+a:hover {
+  color: deepskyblue;
   text-decoration: none;
 }
 
-li a:link, li a:visited {
+.img-circle-text {
+  margin-left: 700px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.img-circle {
+  margin-left: 25%;
+  border-radius: 50%;
+  float: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-top: 1px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+.img-background-blog { /* need two divisions so that text is not as transparent as background image */
+  position: relative;
+  z-index: 5;
   color: gray;
 }
 
-li a:hover {
-  background-color: lightgray;
-  color: white;
+.img-background-blog .photo {
+  position: absolute;
+  z-index: -1;
+  filter: alpha(opacity=20);
+  background-image: url("laptop.jpg");
+  opacity: 0.3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -100px;
+  bottom: 0;
+  left: 0;
+  right: -100px;
 }
 
-li a:active {
-  color: dodgerblue;
+i[class^="icon-"]:before { /* removes underline for FontAwesome icons */
+	display: inline-block;
+	text-decoration: none;
+}
+
+.fa-cog {
+  color: gray;
 }
